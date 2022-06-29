@@ -13,7 +13,7 @@ if ln > 5:
     print("Last digit of {:0} is {:1} and is greater than 5".format(n, ln))
 elif ln == 0:
     print("Last digit of {:0} is {:1} ".format(n, ln), end="")
-    print("and is zero")
+    print("and is 0")
 elif ln < 6 and ln != 0:
     print("Last digit of {} is {:1} ".format(n, ln), end="")
     print("and is less than 6 and not 0")
