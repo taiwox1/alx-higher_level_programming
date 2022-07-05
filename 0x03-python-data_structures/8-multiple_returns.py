@@ -2,8 +2,7 @@
 def multiple_returns(sentence):
     Y = len(sentence)
     X = sentence[0]
+    if Y <= 0:
+        X = None
     tup = Y, X
-    if not sentence:
-        return(None)
-    else:
-        return (tup)
+    return (tup)
