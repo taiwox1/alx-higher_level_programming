@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+my_string = "Best School"
+for i in my_string:
+    print(i);
