@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
+    if not sentence:
+        return None
     Y = len(sentence)
     X = sentence[0]
     tup = Y, X
