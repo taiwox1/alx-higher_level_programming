@@ -4,4 +4,3 @@ def multiple_returns(sentence):
     X = sentence[0]
     tup = Y, X
     return(tup)
-
