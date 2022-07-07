@@ -8,4 +8,6 @@ def search_replace(my_list, search, replace):
         if res[i] == search:
             res[i] = replace
         res1.append(res[i])
+## list comprehension
+## return [replace if search == else n  for n in my_list]
     return res1
