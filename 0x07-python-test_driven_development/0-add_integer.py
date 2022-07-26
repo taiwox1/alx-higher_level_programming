@@ -2,11 +2,11 @@
 # 0-add_integer.py
 """Defines an integer addition function."""
 
-def add_integer(a, b=98):
-    """"Returns an intege: addition of a and b
 
+def add_integer(a, b=98):
+
+    """"Returns an intege: addition of a and b
     Float are typecased to int before addition
-    
     Raises:
         TypeError: if either of a and b is a non-integer and non-float.
     """
