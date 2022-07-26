@@ -1,0 +1,50 @@
+# 3-say_my_name.py
+# ADEDOTUN TAIWO
+
+===============================
+HOW TO USE THE 3-say_my_name.py
+===============================
+
+This module defines the function 3-say_my_name.py
+
+Usage
+=====
+``3-say_my_name prints My name is <first name> <last name>
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("ADEDOTUN", "TAIWO")
+	My name is ADEDOTUN TAIWO
+
+FUNCTION WITH NUMBER AS ARGUMENT FOR ANY
+
+::
+	>>> say_my_name(23, 45)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::
+        >>> say_my_name(23, "Taiwo")
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
+        >>> say_my_name("Taiwo", 34)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
+
+::
+        >>> say_my_name(None, 34)
+        Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
+        >>> say_my_name("Taiwo")
+	Traceback (most recent call last):
+        TypeError: first_name must be a string
+
+::
+        >>> say_my_name("Taiwo", None)
+        Traceback (most recent call last):
+        TypeError: last_name must be a string
