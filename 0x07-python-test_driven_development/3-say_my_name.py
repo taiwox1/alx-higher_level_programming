@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 # 3-say_my_name.py
 
 """Defining function ``say_last_name``"""
