@@ -7,8 +7,8 @@
 def matrix_mul(m_a, m_b):
     """Multiply two matrices.
     Args:
-        m_a 
-        m_b 
+        m_a
+        m_b
     Raises:
         TypeError: If either m_a or m_b is not a list of lists of ints/floats.
         TypeError: If either m_a or m_b is empty.
