@@ -1,4 +1,6 @@
-# 1-my_list.txt
+#!/usr/bin/python3
+#1-my_list.txt
+#taiwoadedotun
 
 =======================
 How to Use 1-my_list.py
