@@ -2,15 +2,16 @@
 
 """Defines a base model class"""
 
+
 class Base:
-    """ This class will be the “base” of all other classes in this project"""
-    """
+
+    """ This class will be the “base” of all other classes in this project
         args: __nb_object(int): the numbers of instances in base
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ base initailization 
+        """ base initailization
             Args:
                 id(int): identity of the new basei
         """
