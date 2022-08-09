@@ -84,7 +84,15 @@ class Rectangle(Base):
 
     def display(self):i
         """Print the rectangle with # representation"""
-        for i in range(self.width):
+        if self.width == 0 and self.width == 0:
+            print("")
+            return
+
+        for i in range(self.y):
+            print("")
+        for i in range(self.height):
+            for j in range(self.x):
+                print(" ")
             for j in range(self.height):
-                print('#', end="")
+                print("#", end="")
 
