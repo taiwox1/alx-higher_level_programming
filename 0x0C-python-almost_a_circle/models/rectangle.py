@@ -84,7 +84,7 @@ class Rectangle(Base):
 
     def display(self):i
         """Print the rectangle with # representation"""
-        if self.width == 0 and self.width == 0:
+        if self.width == 0 or self.width == 0:
             print("")
             return
 
