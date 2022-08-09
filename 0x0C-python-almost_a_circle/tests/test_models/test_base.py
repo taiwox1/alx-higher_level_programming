@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # test_base.py
 """Defines unittests for base.py.
+
+
 Unittest classes:
     TestBase_instantiation - line 23
     TestBase_to_json_string - line 110
@@ -290,13 +292,13 @@ class TestBase_create(unittest.TestCase):
         r1 = Rectangle(3, 5, 1, 2, 7)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (7) 1/2 - 3/5", str(r1))
+        self.assertEqual('[Rectangle] (7) 1/2 - 3/5', str(r1))
 
     def test_create_rectangle_new(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (7) 1/2 - 3/5", str(r2))
+        self.assertEqual('[Rectangle] (7) 1/2 - 3/5', str(r2))
 
     def test_create_rectangle_is(self):
         r1 = Rectangle(3, 5, 1, 2, 7)

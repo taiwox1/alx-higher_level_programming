@@ -100,7 +100,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Update class and over ride the rectangle class"""
-        return "[Rectangle] ({}) {}/{} - {}/{}]".format(self.id,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                         self.x, self.y,
                                                         self.width,
                                                         self.height)
