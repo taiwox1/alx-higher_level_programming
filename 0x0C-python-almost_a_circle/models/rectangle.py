@@ -4,14 +4,23 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Represent a rectangle"""
+
+
+    def __init__(self, width, heigth, x=0, y=0, id=None):
     """ Rectangle in herits from base, a rrectagle class
         Args:
             width(int): width of rectangle
             height(int): height of rectangle
             x(int): x argment
             y(int): y argument
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0
     """
-    def __init__(self, width, heigth, x=0, y=0, id=None):
         self.__width = width
         self.__height = height
         self.__x = x
@@ -72,4 +81,4 @@ class Rectangle(Base):
             raise TypeError('y must be an integer')
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__u = value
+        self.__y = value
