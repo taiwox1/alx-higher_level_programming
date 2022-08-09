@@ -104,7 +104,7 @@ class Rectangle(Base):
                                                         self.width,
                                                         self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the Rectangle.
             Args:
                 1st argument should be the id attribute
