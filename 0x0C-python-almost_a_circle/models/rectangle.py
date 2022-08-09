@@ -95,3 +95,4 @@ class Rectangle(Base):
                 print(" ", end="")
             for w in range(self.width):
                 print("#", end="")
+            print("")
