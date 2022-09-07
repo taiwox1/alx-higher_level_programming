@@ -100,10 +100,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Update class and over ride the rectangle class"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.x, self.y,
-                                                        self.width,
-                                                        self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
