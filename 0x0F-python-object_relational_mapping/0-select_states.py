@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 
-"""
-    python script that list all states from a database hbtn_0e_0_usa
-"""
+# List all states from the database htn_0e_0_usa
+# Usage: ./0-select_staes.py (username, password, name)
 
+import sys
 import MySQLdb
-
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "hbtn_0e_0_usa"), pool_pre_ping=True)
-Base.matadata.create_all(engine)
-
-session = Session(engine)
-for state in session.query(State).order_by(State.id).all():
-    print("{}: {}".format(state.id, state.name))
-session.close()
+if __name__ == "__main__":
+db.MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.arg[3])
+c = db.cursor()
+c.execute("SELECT * FROM states")
+[print(state) for state in c.fetchall()]
