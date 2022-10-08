@@ -6,11 +6,9 @@
 import sys
 import MySQLdb
 if __name__ == "__main__":
-conn = db.MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.arg[3])
-cur = conn.cursor()
-cur.execute("SELECT * FROM states ORDER BY id ASC")
-states = cur.fetchall()
-for state in states:
-    print(state)
-cur.close()
-conn.close()
+    conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    states = cur.fetchall()
+    for state in states:
+        print(state)
