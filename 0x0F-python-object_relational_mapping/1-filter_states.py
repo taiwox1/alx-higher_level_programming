@@ -10,7 +10,7 @@ from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    dbase = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+    dbase = MySQLdb.connect(user=argv[1], port=3306, passwd=argv[2], db=argv[3])
     cur = dbase.cursor()
     cur.execute("SELECT * FROM states WHERE name REGEXP '^[N]' ORDER BY id")
     query_table = cur.fetchall()
