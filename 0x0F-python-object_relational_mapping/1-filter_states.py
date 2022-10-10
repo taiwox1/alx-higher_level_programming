@@ -15,3 +15,5 @@ if __name__ == "__main__":
     query_table = cur.fetchall()
     for state in query_table:
         print(state)
+    cur.close()
+    dbase.close() 
