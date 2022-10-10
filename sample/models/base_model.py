@@ -5,7 +5,7 @@ import uuid
 from datetime import datetime as dt
 """ define the BaseModel class """
 
-class Base_model:
+class BaseModel:
     
     def __init__(self, id=None, created_at=None, updated_at=None):
         """Initialize a new Base. 
@@ -31,7 +31,13 @@ class Base_model:
             self.created_at = time_formated
 
 
+    def __str__(self):
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+
 myclass = Base_model()
 print(myclass.id)
 print(myclass.created_at)
 print(myclass.updated_at)
+print('--__--__---__--__--__--__ -- __--__ ---__--__--')
+print(myclass.__str__())
+
