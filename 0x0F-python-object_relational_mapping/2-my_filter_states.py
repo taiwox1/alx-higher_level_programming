@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * \
             FROM states \
-            WHERE name='{}'".format(argv[4]))
+            WHERE BINARY name='{}'".format(argv[4]))
     states_guery = cur.fetchall()
     for state in states_guery:
         print(state)
