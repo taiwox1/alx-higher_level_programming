@@ -10,12 +10,13 @@
 from sys import argv
 import MySQLdb
 if __name__ == "__main__":
-    db = Mysqld.connect(user=argv[1], passwd=argv[2], db=argv[3], needed=argv[4])
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+    search_name = argv[4]
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
     states_guery = cur.fetchall()
     for state in states_guery:
-        if state[1][0] == needed:
+        if state[1] == search_name:
             print(state)
     cur.close()
     db.close()
