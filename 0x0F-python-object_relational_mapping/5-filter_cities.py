@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
     dbase = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
-    sta_arg == argv[4]
+    sta_arg = argv[4]
     cur = dbase.cursor()
     cur.execute("SELECT c.id, c.name, s.name FROM cities c \
             JOIN states s ON s.id = state_id")
