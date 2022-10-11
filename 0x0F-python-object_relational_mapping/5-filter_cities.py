@@ -15,8 +15,9 @@ if __name__ == "__main__":
     cur.execute("SELECT c.id, c.name, s.name FROM cities c \
             JOIN states s ON s.id = state_id")
     cities = cur.fetchall()
+    state_list = []
     for city in cities:
         if (city[2] == sta_arg):
-            print(city)
-        else:
-            print("kosise")
+            state_list.append(city[1])
+
+    print(", ".join(state_list))
