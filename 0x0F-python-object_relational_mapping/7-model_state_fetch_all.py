@@ -8,6 +8,7 @@
 
 """
 from sys import argv
+import SQLAlchemy
 from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -23,4 +24,3 @@ query_state = session.query(State).order_by(State.id).all()
 
 for state in query_state:
     print("{}: {}".format(state.id, state.name))
-session.close()
