@@ -5,9 +5,7 @@
     script takes 3 arguments: <mysql username>, <mysql password>\
             <database name>
 """
-
-import sqlalchemy
-from model_state import Base, State
+from model_state import State
 from model_city import City
 from sys import argv
 from sqlalchemy import create_engine
@@ -22,4 +20,4 @@ if __name__ == "__main__":
     for city, state in session.query(City, State) \
             .filter(City.state_id == State.id) \
             .order_by(City.id):
-        print("{}: {} {}".format(state.name, city.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
