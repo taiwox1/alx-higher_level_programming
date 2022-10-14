@@ -21,6 +21,7 @@ class City(Base):
         __tablename__ (str): The name of the MySQL table to store States.
         id (sqlalchemy.Integer): The state's id.
          name (sqlalchemy.String): The state's name.
+         state_id (sqlalchemy.String): The city's state id.
     """
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
