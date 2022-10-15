@@ -5,7 +5,7 @@
         state class:\
                 inherits from Base Tips\
                 links to the MySQL table states\
-                id : interger  that represents a column of an\
+                 id : interger  that represents a column of an\
                 auto-generated,
     name: represents a column of a string with\
             maximum 128 characters and can’t be null
@@ -20,7 +20,8 @@ class State(Base):
     """Represents a state for a MySQL database.
         __tablename__ (str): The name of the MySQL table to store States.
         id (sqlalchemy.Integer): The state's id.
-         name (sqlalchemy.String): The state's name.
+        name (sqlalchemy.String): The state's name.
+        cities (sqlalchemy.orm.relationship): The State-City relationship
     """
     __tablename__ = "states"
     id = Column(Integer, primary_key=True)
