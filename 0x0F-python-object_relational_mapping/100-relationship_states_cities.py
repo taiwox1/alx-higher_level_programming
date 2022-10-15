@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-
 """
-     script that creates the State “California” with the City
-     “San Francisco” from the database hbtn_0e_100_usa
+    Creates the State “California” with the City “San Francisco”
+    from the database hbtn_0e_100_usa.
+    Usage: ./100-relationship_states_cities.py <mysql username>\
+            <mysql password>\
+            <database name>
 """
-from argv import argv
+from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import State
@@ -16,7 +18,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    session = Sessioin()
+    session = Session()
 
     session.add(City(name="San Francisco", state=State(name="California")))
     session.commit()
