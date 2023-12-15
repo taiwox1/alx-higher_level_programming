@@ -1,1 +1,1 @@
-"hello world"
+Warming up for JavaScript projects
